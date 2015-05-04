@@ -10,19 +10,30 @@
 #import "person.h"
 @implementation Person
 -(id) init{
-    self -> FirstName = @"Bruce";
-    self -> LastName = @"Wayne";
+    self -> firstName = @"Bruce";
+    self -> lastName = @"Wayne";
     return self;
 }
 -(id) init: (NSString *) firstName lastName: (NSString *) lastName{
-    self -> FirstName = firstName;
-    self -> LastName = lastName;
+    self -> firstName = firstName;
+    self -> lastName = lastName;
     return self;
 }
 -(void) Print{
-    NSLog(self ->FirstName);
-    NSLog(self ->LastName);
+    NSLog(self -> firstName);
+    NSLog(self -> lastName);
 }
-
+-(NSString *) firstName{
+    return self -> firstName;
+}
+-(void) setFirstName: (NSString *)fName{
+    self -> firstName = fName;
+}
+-(NSString *) lastName{
+    return self -> lastName;
+}
+-(void) setLastName: (NSString *)lName{
+    self -> lastName = lName;
+}
 
 @end

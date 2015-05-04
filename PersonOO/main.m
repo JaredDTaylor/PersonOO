@@ -13,8 +13,10 @@ int main(int argc, const char * argv[]) {
         Person * myPerson = [Person alloc];
         myPerson = [myPerson init: @"Bruce" lastName: @"Wayne"];
         [myPerson Print];
-        
-        
+        [myPerson setFirstName: @"Clark"];
+        NSLog([myPerson firstName]);
+        [myPerson setLastName: @"Kent"];
+        NSLog([myPerson lastName]);
     }
     return 0;
 }

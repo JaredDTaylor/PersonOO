@@ -9,9 +9,17 @@
 #ifndef PersonOO_person_h
 #define PersonOO_person_h
 @interface Person : NSObject {
-    NSString * FirstName;
-    NSString * LastName;
+    NSString * firstName;
+    NSString * lastName;
+    int Age;
 }
+-(int)Age;
+-(void) setAge: (int)a;
+-(NSString *)firstName;
+-(void) setFirstName : (NSString *)fName;
+-(NSString *)lastName;
+-(void) setLastName : (NSString *)lName;
+
 -(id) init;
 -(id) init: (NSString *)firstName lastName: (NSString *) lastName;
 -(void) Print;
